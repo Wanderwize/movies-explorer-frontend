@@ -1,0 +1,139 @@
+.profile {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 937px;
+}
+
+.profile__container {
+  margin: 80px auto 22px;
+}
+
+.profile__title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 123px;
+}
+
+.profile__name-container {
+  display: flex;
+  flex-direction: row;
+  width: 410px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+  }
+}
+
+.profile__email-container {
+  display: flex;
+  flex-direction: row;
+  width: 410px;
+  justify-content: space-between;
+
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+  }
+}
+
+.profile__buttons {
+  margin: 220px auto 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__button-edit {
+  font-family: 'Inter';
+  border: none;
+  background-color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration: none;
+  text-align: center;
+
+  color: #000000;
+}
+
+.profile__button-logout {
+  border: none;
+  background-color: #ffffff;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration: none;
+  margin-top: 16px;
+  text-align: center;
+
+  color: #ff4062;
+}
+
+@media only screen and (max-width: 768px) {
+  .profile {
+    max-width: 768px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile__container {
+    margin: 80px auto 88px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .profile {
+    max-width: 320px;
+    min-height: 706px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile__container {
+    max-width: 260px;
+    margin: 80px auto 88px;
+  }
+
+  .profile__email-container {
+    max-width: 260px;
+  }
+
+  .profile__name-container {
+    max-width: 260px;
+  }
+
+  .profile__title {
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+  .profile__buttons {
+    margin: 379px auto 40px;
+  }
+}

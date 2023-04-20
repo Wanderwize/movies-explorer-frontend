@@ -1,0 +1,30 @@
+.saved-movies {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+@media only screen and (max-width: 768px) {
+  .saved-movies {
+    width: 768px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .saved-movies {
+    max-width: 320px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #e8e8e8;
+  }
+}

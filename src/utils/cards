@@ -1,0 +1,28 @@
+import image1 from '../images/image1.svg'
+
+export const cards = [
+  {
+   
+    link: ''
+  },
+  {
+  
+   
+  },
+  {
+   
+    
+  },
+  {
+   
+
+  },
+  {
+   
+   
+  },
+  {
+  
+
+  }
+];
