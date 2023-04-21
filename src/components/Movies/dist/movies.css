@@ -1,0 +1,24 @@
+.movies {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+@media only screen and (max-width: 768px) {
+  .movies {
+    width: 768px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .movies {
+    width: 320px;
+  }
+}

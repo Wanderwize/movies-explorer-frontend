@@ -1,0 +1,130 @@
+.register {
+  background-color: #ffffff;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding-top: 70px;
+  height: 700px;
+}
+
+.register__container {
+  width: 396px;
+  margin: 0 auto;
+}
+
+.register__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.register__input-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #a0a0a0;
+}
+
+.register__input {
+  width: 396px;
+  height: 46px;
+  background: #f9f9f9;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+.register__button {
+  width: 396px;
+  height: 46px;
+  margin-top: 69px;
+  background-color: #000000;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.register__form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register__form-footer p {
+  margin-right: 6px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #a0a0a0;
+}
+.register__form-footer a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .register {
+    padding-top: 232px;
+    max-width: 768px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .register {
+    padding-top: 56px;
+    max-width: 320px;
+  }
+
+  .register__container {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+  .register__container img {
+    width: 38px;
+    margin: 0 auto;
+  }
+
+  .register__title {
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    text-align: center;
+  }
+
+  .register__input-container {
+    max-width: 260px;
+  }
+
+  .register__input {
+    max-width: 260px;
+  }
+
+  .register__button {
+    max-width: 260px;
+    margin-top: 179px;
+  }
+
+  .register__form {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}

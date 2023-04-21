@@ -1,4 +1,3 @@
-import arrow from '../../images/portfolio-arrow.svg';
 
 function Footer() {
   return (
