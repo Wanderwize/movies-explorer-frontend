@@ -103,11 +103,12 @@
   .aboutme__about {
     max-width: 668px;
     margin-left: 50px;
-    margin-top: 90px;
+    margin-top: 80px;
   }
   .aboutme__name {
     font-size: 40px;
     line-height: 40px;
+    margin-top: 50px;
   }
   .aboutme__title {
     font-size: 12px;
@@ -115,6 +116,7 @@
   }
 
   .aboutme__subtitle {
+    margin-top: 20px;
     margin-right: 49px;
     font-size: 12px;
     line-height: 18px;
@@ -182,6 +184,30 @@
   .aboutme__link {
     margin-bottom: 91px;
     margin-top: 40px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .aboutme__about {
+    margin-top: 135px;
+    padding-bottom: 30px;
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+  }
+
+  .aboutme__name {
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .aboutme__link {
+    margin-bottom: 65px;
+    margin-top: 10px;
     font-size: 14px;
     line-height: 17px;
   }

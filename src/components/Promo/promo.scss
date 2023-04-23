@@ -33,18 +33,26 @@
   .promo {
     max-width: 768px;
     margin: 0 auto;
-    height: 844px;
+    height: 820px;
     background-color: #f3c1f8;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: end;
 
+    h2 {
+      margin-left: 5px;
+      margin-top: 280px;
+      font-size: 40px;
+      line-height: 52px;
+      text-align: center;
+    }
+
     img {
       max-width: 680px;
       margin: 0;
-      margin-top: 140px;
-      margin-bottom: 70px;
+      margin-top: 130px;
+      margin-bottom: 80px;
     }
   }
 }
@@ -59,21 +67,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: end;
-   
 
     img {
-      max-width: 680px;
-   
-      
+      object-fit: cover;
       margin: 0;
-      margin-top: 60px;
-      margin-bottom: 70px;
+      margin-top: 40px;
+      margin-bottom: 20px;
       background-size: contain;
     }
 
     h2 {
       margin: 0 auto;
       margin-top: 0;
+      margin-bottom: 10px;
       max-width: 100%;
       font-size: 31px;
       line-height: 39px;

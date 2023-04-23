@@ -1,5 +1,5 @@
 .footer {
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   // margin-top: 50px;
   background-color: #ffffff;
@@ -14,7 +14,7 @@
 }
 
 .footer__title {
-  padding-top: 204px;
+
   padding-bottom: 20px;
   font-family: 'Inter';
   font-style: normal;
@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-self: center;
 }
 
 .footer__year {
@@ -53,10 +54,11 @@
   line-height: 16px;
   text-align: right;
   color: #000000;
+  text-decoration: none;
 }
 
 .footer__github {
-  margin-right: 20px;
+  margin-right: 0px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -64,6 +66,7 @@
   line-height: 16px;
   text-align: right;
   color: #000000;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -75,7 +78,7 @@
   }
   .footer__title {
     max-width: 708px;
-    padding-top: 159px;
+    padding-top: 129px;
   }
   .footer__container {
     max-width: 708px;
@@ -88,7 +91,6 @@
 @media only screen and (max-width: 600px) {
   .footer {
     max-width: 600px;
-    
   }
 }
 
@@ -104,6 +106,7 @@
     font-size: 12px;
     line-height: 15px;
     text-align: center;
+    padding-top: 165px;
   }
   .footer__container {
     flex-direction: column;

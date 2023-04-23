@@ -5,7 +5,7 @@ function Register() {
   return (
     <section className="register">
       <div className="register__container">
-        <img src={headerCircle} alt="" />
+        <img className='register__circle' src={headerCircle} alt="" />
         <h2 className="register__title">Добро пожаловать!</h2>
         <form className="register__form" action="">
           <div className="register__input-container">
@@ -22,14 +22,14 @@ function Register() {
 
           <div className="register__input-container">
             <p className="register__input-title">Пароль</p>
-            <input className="register__input" type="password" />
-            <span className="register__error"></span>
+            <input style={{color: 'red'}} className="register__input" type="password" />
+            <span className="register__error">Что-то пошло не так...</span>
           </div>
-          <button className="register__button">Зарегистрироваться</button>
+          <button className="register__button-register">Зарегистрироваться</button>
         </form>
         <div className="register__form-footer">
           <p>Уже зарегистрированы?</p>
-          <a href="/sign-in">Войти</a>
+          <a href="/sign-in" target="_blank">Войти</a>
         </div>
       </div>
     </section>

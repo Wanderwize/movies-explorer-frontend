@@ -11,7 +11,7 @@ function AboutMe() {
         <h3 className='aboutme__title'>Фронтенд-разработчик, 30 лет</h3>
         <p className='aboutme__subtitle'>Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена 
 и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.</p>
-        <a className='aboutme__link' href="https://github.com/wanderwize">Github</a>
+        <a className='aboutme__link' href="https://github.com/wanderwize" target="_blank">Github</a>
       </div>
       <img className='aboutme__image' src={vitaly} alt="" />
      </div>

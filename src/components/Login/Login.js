@@ -16,14 +16,14 @@ function Login() {
 
           <div className="register__input-container">
             <p className="register__input-title">Пароль</p>
-            <input className="register__input" type="password" />
+            <input className="register__input " type="password" />
             <span className="register__error"></span>
           </div>
-          <button className="register__button">Войти</button>
+          <button className="register__button-login">Войти</button>
         </form>
         <div className="register__form-footer">
           <p>Ещё не зарегистрированы?</p>
-          <a href="/sign-up">Регистрация</a>
+          <a href="/sign-up" target="_blank">Регистрация</a>
         </div>
       </div>
     </section>

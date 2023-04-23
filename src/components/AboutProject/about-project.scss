@@ -145,12 +145,44 @@
     max-width: 668px;
   }
 
+  .about-project__subtitles {
+    display: flex;
+
+    div {
+      margin-top: 50px;
+      margin-left: 50px;
+      h3 {
+        width: 300px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        width: 320px;
+      }
+    }
+    div:last-child {
+      margin-left: 30px;
+    }
+  }
+
   .about-project__roadmap {
     max-width: 668px;
+    margin-top: 95px;
   }
 
   .about-project__sides {
     max-width: 668px;
+  }
+
+  .about-project__title {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #000;
+    max-width: 668px;
+    margin-left: 50px;
+    margin-top: 0;
+    padding-top: 90px;
   }
 }
 
@@ -246,5 +278,59 @@
       text-align: center;
       color: #a0a0a0;
     }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .about-project__title {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 284px;
+    margin: 0;
+    margin-left: 15px;
+    padding-top: 75px;
+  }
+  .about-project__subtitles {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      max-width: 284px;
+      margin-left: 15px;
+      margin-top: 65px;
+
+      h3 {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        font-size: 11px;
+        line-height: 16px;
+        max-width: 285px;
+      }
+    }
+    div:last-child {
+      max-width: 284px;
+      margin-left: 15px;
+      margin-top: 53px;
+
+      h3 {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        font-size: 11px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .about-project__roadmap {
+    margin-top: 60px;
+    margin-left: 12px;
   }
 }

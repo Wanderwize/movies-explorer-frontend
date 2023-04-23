@@ -104,6 +104,36 @@
   .profile__container {
     margin: 80px auto 88px;
   }
+
+  .profile__email-container {
+    display: flex;
+    flex-direction: row;
+    width: 410px;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 13px;
+      color: #000000;
+    }
+  }
+
+  .profile__title {
+    margin-top: 130px;
+    margin-bottom: 88px;
+  }
+}
+
+.profile__buttons {
+  margin: 200px auto 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 320px) {
@@ -118,7 +148,7 @@
 
   .profile__container {
     max-width: 260px;
-    margin: 80px auto 88px;
+    margin: 80px auto 0;
   }
 
   .profile__email-container {
@@ -127,13 +157,27 @@
 
   .profile__name-container {
     max-width: 260px;
+    margin-top: -10px;
   }
 
   .profile__title {
-    margin-top: 0;
+    margin-top: -10px;
+    margin-right: 10px;
     margin-bottom: 80px;
   }
   .profile__buttons {
-    margin: 379px auto 40px;
+    margin: 370px auto 40px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .profile__button-edit {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .profile__button-logout {
+    font-size: 12px;
+    line-height: 15px;
   }
 }

@@ -50,6 +50,7 @@
   .search-form__container {
     max-width: 768px;
     margin: 0 auto;
+    padding-top: 54px;
 
     input {
       max-width: 628px;
@@ -69,7 +70,7 @@
 
 @media only screen and (max-width: 320px) {
   .search-form__container {
-    margin: 0 auto;
+    margin: 25px auto 0;
 
     input {
       max-width: 212px;
@@ -84,7 +85,7 @@
     input::placeholder {
     }
     button {
-      max-width: 70px;
+      width: 70px;
     }
   }
 }

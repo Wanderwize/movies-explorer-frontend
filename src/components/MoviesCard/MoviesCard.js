@@ -2,7 +2,7 @@ import image1 from '../../images/image1.svg';
 import image2 from '../../images/delete-card.svg';
 import React, { useState } from 'react';
 
-function MoviesCard() {
+function MoviesCard(props) {
   const currentUrl = window.location.pathname === '/movies' ? true : false;
   const [liked, setLiked] = useState(false);
 
@@ -14,7 +14,7 @@ function MoviesCard() {
     <div className="movies__card">
       <img src={image1} alt="" />
       <div className="movies__list_card-name">
-        <h2>33 слова о дизайне</h2>
+        <h2>{props.text}</h2>
         {!currentUrl ? (
           <button
             onClick={handleClick}
