@@ -5,7 +5,7 @@ function Login() {
   return (
     <section className="register">
       <div className="register__container">
-        <img src={headerCircle} alt="" />
+        <a href="/" target='_blank'><img src={headerCircle} alt="" /></a>
         <h2 className="register__title">Рады видеть!</h2>
         <form className="register__form" action="">
           <div className="register__input-container">

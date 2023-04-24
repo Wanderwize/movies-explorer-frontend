@@ -11,7 +11,7 @@
   div {
     max-width: 550px;
     margin-left: 70px;
-    margin-top: 70px;
+    margin-top: 60px;
 
     h3 {
       font-family: 'Inter';
@@ -140,6 +140,54 @@
   }
 }
 
+@media only screen and (max-width: 710px) {
+  .about-project__border {
+    max-width: 668px;
+  }
+
+  .about-project__subtitles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 768px;
+    div {
+      margin-top: 50px;
+      margin-left: 50px;
+      h3 {
+        width: 300px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        width: 320px;
+      }
+    }
+    div:last-child {
+      margin-left: 30px;
+    }
+  }
+
+  .about-project__roadmap {
+    max-width: 668px;
+    margin-top: 95px;
+  }
+
+  .about-project__sides {
+    max-width: 668px;
+  }
+
+  .about-project__title {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #000;
+    max-width: 668px;
+    margin-left: 50px;
+    margin-top: 0;
+    padding-top: 90px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .about-project__border {
     max-width: 668px;
@@ -147,7 +195,7 @@
 
   .about-project__subtitles {
     display: flex;
-
+    max-width: 768px;
     div {
       margin-top: 50px;
       margin-left: 50px;
@@ -277,6 +325,29 @@
       line-height: 13px;
       text-align: center;
       color: #a0a0a0;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .about-project__title {
+
+  }
+  .about-project__subtitles {
+  
+
+    div {
+  
+
+      h3 {
+       
+      }
+
+      p {
+        font-size: 11px;
+        line-height: 16px;
+        max-width: 255px;
+      }
     }
   }
 }

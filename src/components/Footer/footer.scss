@@ -1,7 +1,7 @@
 .footer {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
-  // margin-top: 50px;
+  margin-top: 175px;
   background-color: #ffffff;
 }
 
@@ -14,7 +14,6 @@
 }
 
 .footer__title {
-
   padding-bottom: 20px;
   font-family: 'Inter';
   font-style: normal;
@@ -73,6 +72,7 @@
   .footer {
     max-width: 768px;
     margin: 0 auto;
+    margin-top: 30px;
     // margin-top: 50px;
     background-color: #ffffff;
   }
@@ -90,7 +90,7 @@
 
 @media only screen and (max-width: 600px) {
   .footer {
-    max-width: 600px;
+   
   }
 }
 
@@ -98,11 +98,11 @@
   .footer {
     max-width: 320px;
     margin: 0 auto;
-    // margin-top: 50px;
+     margin-top: -40px;
     background-color: #ffffff;
   }
   .footer__title {
-    max-width: 300px;
+    width: 300px;
     font-size: 12px;
     line-height: 15px;
     text-align: center;
@@ -126,11 +126,12 @@
     font-size: 12px;
     line-height: 15px;
     margin-right: 0;
-    margin-bottom: 0;
+    margin-bottom: 13px;
     margin-top: 30px;
   }
   .footer__github {
     font-size: 12px;
     line-height: 15px;
+    margin-bottom: 15px;
   }
 }

@@ -1,11 +1,14 @@
 .portfolio {
-  max-width: 1280px;
+  width: calc(100% - 140px);
+  max-width: 1140px;
   margin: 0 auto;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   h2 {
     margin-left: 70px;
+    margin-bottom: 10px;
+    margin-top: 0px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -15,8 +18,9 @@
   }
   div {
     margin: 0 auto;
-    margin-bottom: 20px;
-    width: 1140px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +41,7 @@
   margin-top: 0;
   margin-bottom: 19px;
   letter-spacing: -0.04em;
-
+  text-decoration: none;
   color: #000000;
 }
 
@@ -47,25 +51,29 @@
   margin-right: 5px;
 }
 
-@media only screen and (max-width: 1008px) {
+@media only screen and (max-width: 1138px) {
   .portfolio {
+    width: calc(100% - 100px);
     h2 {
       margin-left: 50px;
+      max-width: 938px;
     }
     div {
-      width: 938px;
+      width: 100%;
     }
   }
 }
 
 @media only screen and (max-width: 768px) {
   .portfolio {
+    width: calc(100% - 100px);
     h2 {
       margin-top: 5px;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
     div {
-      width: 668px;
+      width: 100%;
+      margin-top: 13px;
     }
   }
 
@@ -81,31 +89,41 @@
 
 @media only screen and (max-width: 578px) {
   .portfolio {
+    max-width: 528px;
     h2 {
     }
     div {
-      width: 528px;
+      max-width: 528px;
     }
   }
 }
 
 @media only screen and (max-width: 320px) {
   .portfolio {
+    width: calc(100% - 28px);
     h2 {
-      margin-left: 14px;
+      margin-top: 5px;
+      margin-left: 0px;
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
     }
     div {
-      margin-left: 14px;
-      width: 292px;
+      width: 100%;
       margin-right: 0;
+      margin-top: 19px;
       .portfolio__item {
         font-size: 18px;
         line-height: 28px;
         letter-spacing: -0.04em;
+      }
+
+      img {
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+        margin-top: -10px;
       }
     }
   }

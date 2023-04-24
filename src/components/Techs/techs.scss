@@ -1,6 +1,7 @@
 .techs {
   margin: 0px auto;
   max-width: 1280px;
+
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
@@ -19,7 +20,7 @@
   max-width: 1140px;
   padding-top: 100px;
   margin-left: 70px;
-  margin-top: 0;
+  margin-top: -30px;
 }
 
 .techs__subtitle {
@@ -31,7 +32,7 @@
   text-align: center;
   letter-spacing: -0.04em;
   color: #000000;
-  margin: 0px auto 0;
+  margin: -17px auto 0;
   padding-top: 90px;
 }
 
