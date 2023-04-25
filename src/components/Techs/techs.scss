@@ -19,8 +19,8 @@
   border-bottom: 1px solid #000;
   max-width: 1140px;
   padding-top: 100px;
-  margin-left: 70px;
-  margin-top: -30px;
+  margin-left: 68px;
+  margin-top: -20px;
 }
 
 .techs__subtitle {
@@ -54,6 +54,7 @@
   margin: 0 auto 100px;
   flex-wrap: wrap;
   text-decoration: none;
+  padding-left: 0
 }
 
 .techs__item {
@@ -112,7 +113,7 @@
   .techs__title {
     max-width: 284px;
     margin-left: 18px;
-    margin-top: -45px;
+    margin-top: -50px;
     margin-bottom: 0;
     font-weight: 400;
     font-size: 18px;
