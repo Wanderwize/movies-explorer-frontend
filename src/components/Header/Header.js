@@ -5,8 +5,10 @@ function Header() {
 
   return (
     <header className={currentUrl ? 'header ' : 'header header__white'}>
-      <div className="header__circle">
-        <a href="/movies" target="_blank"><img src={headerCircle} alt="" /></a>
+      <div className={currentUrl ? 'header__circle-main' : 'header__circle'}>
+        <a href="/" target="_blank">
+          <img src={headerCircle} alt="" />
+        </a>
       </div>
       {currentUrl ? (
         <div className="header__nav header__nav-main">
@@ -24,7 +26,11 @@ function Header() {
             <a className="header__nav-films" href="/movies" target="_blank">
               Фильмы
             </a>
-            <a className="header__nav-saved" href="/saved-movies" target="_blank">
+            <a
+              className="header__nav-saved"
+              href="/saved-movies"
+              target="_blank"
+            >
               Сохраненные фильмы
             </a>
           </div>

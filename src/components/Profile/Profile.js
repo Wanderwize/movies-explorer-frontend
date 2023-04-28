@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 function Profile() {
   return (
     <section className="profile">
-      <Header />
+      <Header style={{marginTop: '30px'}}/>
       <div className="profile__container">
         <h2 className="profile__title">Привет, Виталий</h2>
         <div className="profile__name-container">

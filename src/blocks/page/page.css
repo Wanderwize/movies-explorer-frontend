@@ -11,4 +11,6 @@
   background-color: #ffffff;
   /* background-color: #260630; */
   font-family: 'Inter', 'Arial ', sans-serif;
+  max-width: 1280px;
+  min-width: 300px;
 }

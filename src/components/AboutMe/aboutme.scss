@@ -17,18 +17,18 @@
   color: #000000;
   padding-bottom: 23px;
   border-bottom: 1px solid #000;
-  max-width: 1140px;
+  width: calc((1140 / 1280) * 100%);
   margin-top: 100px;
   margin-left: 70px;
 }
 
 .aboutme__info {
-  max-width: 1140px;
+  width: calc((1140 / 1280) * 100%);
   margin-left: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: -20px
+  margin-top: -20px;
 }
 
 .aboutme__container {
@@ -85,7 +85,7 @@
 .aboutme__link {
   margin: 0;
   margin-top: 99px;
-  margin-bottom: 101px;
+  margin-bottom: 90px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -93,6 +93,11 @@
   line-height: 17px;
   text-decoration: none;
   color: #000000;
+}
+
+.aboutme__link:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .aboutme__image {
@@ -103,18 +108,19 @@
 
 @media only screen and (max-width: 768px) {
   .aboutme__about {
-    max-width: 668px;
-    margin-left: 50px;
-    margin-top: 70px;
+    width: calc((668 / 768) * 100%);
+    margin-left: 47px;
+    margin-top: 73px;
   }
   .aboutme__name {
     font-size: 40px;
     line-height: 40px;
-    margin-top: 70px;
+    margin-top: 67px;
   }
   .aboutme__title {
     font-size: 12px;
     line-height: 18px;
+    margin-top: 15px;
   }
 
   .aboutme__subtitle {
@@ -127,7 +133,7 @@
   .aboutme__image {
     max-width: 255px;
     margin: 0;
-    margin-right: 50px;
+    margin-right: 20px;
     margin-top: 66px;
     align-self: start;
   }
@@ -138,11 +144,11 @@
 
   .aboutme__link {
     margin-bottom: 91px;
-    margin-top: 80px;
+    margin-top: 87px;
   }
 }
 
-@media only screen and (max-width: 456px) {
+@media only screen and (max-width: 472px) {
   .aboutme__info {
     margin: 0 auto;
     flex-direction: column;
@@ -175,7 +181,7 @@
   .aboutme__image {
     align-self: auto;
     order: 1;
-    min-width: 292px;
+    max-width: 292px;
     margin-right: 20px;
   }
 
@@ -191,9 +197,9 @@
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 367px) {
   .aboutme__about {
-    margin-top: 125px;
+    margin-top: 130px;
     padding-bottom: 30px;
     margin-left: 10px;
     font-size: 18px;
@@ -201,8 +207,12 @@
     letter-spacing: -0.04em;
   }
 
+  .aboutme__title {
+    margin-top: 18px;
+  }
+
   .aboutme__name {
-    margin-top: 30px;
+    margin-top: 40px;
     font-size: 30px;
     line-height: 36px;
   }
@@ -212,5 +222,39 @@
     margin-top: 10px;
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .aboutme__info {
+    margin: 0 auto;
+    flex-direction: column;
+    width: calc((292 / 320) * 100%);
+
+    img {
+      margin-top: 58px;
+      width: 100%;
+    }
+  }
+
+  .aboutme__subtitle {
+    max-width: 292px;
+    margin-right: 0px;
+
+    p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 16px;
+      /* or 145% */
+
+      color: #000000;
+
+      mix-blend-mode: normal;
+    }
+  }
+
+  .aboutme__link {
+    margin-bottom: 65px;
+    margin-top: 40px;
   }
 }

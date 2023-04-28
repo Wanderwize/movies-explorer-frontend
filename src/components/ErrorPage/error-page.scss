@@ -1,15 +1,14 @@
 .error-page {
   display: flex;
   flex-direction: column;
-  max-width: 1280px;
+  width: 100%;
   background-color: #ffffff;
   margin: 0 auto;
- height: 100%;
 }
 
 .error-page__title {
-  margin-top: 256px;
-  margin-bottom: 5px;
+  margin-top: 245px;
+  margin-bottom: 0px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -20,7 +19,8 @@
 }
 
 .error-page__subtitle {
-  margin-bottom: 261px;
+  margin-top: 5px;
+  margin-bottom: 185px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -40,4 +40,46 @@
   color: #000000;
   margin-bottom: 60px;
   text-decoration: none;
+  margin-top: 0px;
+}
+
+.error-page__link:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .error-page {
+    height: 1024px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .error-page {
+    height: 780px;
+  }
+
+  .error-page__title {
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 97px;
+    text-align: center;
+  }
+
+  .error-page__subtitle {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    margin-bottom: 280px;
+  }
+
+  .error-page__link {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+ 
 }

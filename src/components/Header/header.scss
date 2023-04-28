@@ -1,20 +1,44 @@
 .header {
   background-color: #f3c1f8;
-  margin: 0 auto;
-  max-width: 1280px;
+  position: relative;
   width: 100%;
   min-height: 74px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin: 0 70px 0 0px;
+
+
 }
 
 .header__circle {
-  margin-left: 70px;
+  margin-right: 44px;
+}
+
+.header__circle-main {
+  margin-left: 68px;
+}
+
+.header__circle:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.header__circle-main:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .header__white {
   background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+ 
 }
 
 .header__nav {
@@ -24,7 +48,6 @@
 }
 
 .header__nav-login {
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   width: 1060px;
@@ -47,13 +70,17 @@
   margin-right: 30px;
 }
 
+.header__nav-link:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .header__nav-button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 76px;
   height: 32px;
-
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -68,8 +95,13 @@
   text-align: center;
 }
 
+.header__nav-button:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .header__nav-films {
-  margin-right: 28px;
+  margin-right: 18px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -77,6 +109,11 @@
   line-height: 18px;
   text-align: right;
   color: #000000;
+}
+
+.header__nav-films:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .header__nav-saved {
@@ -89,6 +126,11 @@
   color: #000000;
 }
 
+.header__nav-saved:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .header__nav-accounts {
   font-family: 'Inter';
   font-style: normal;
@@ -98,6 +140,11 @@
   display: flex;
   align-items: center;
   color: #000000;
+}
+
+.header__nav-accounts:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .header__nav-film {
@@ -117,6 +164,12 @@
   width: 26px;
   height: 30px;
 }
+
+.header__nav-icon:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .header__nav-button {
 }
 
@@ -132,8 +185,13 @@
 
     img {
       align-items: flex-start;
-      margin-left: 30px;
+      margin-left: 35px;
     }
+  }
+
+  .header__circle-main {
+    margin-left: -5px;
+    margin-top: -20px;
   }
 
   .header__nav {
@@ -144,7 +202,7 @@
   .header__nav-main {
     margin-right: 30px;
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     visibility: visible;
     opacity: 1;
   }
@@ -189,12 +247,25 @@
   .header__nav-accounts {
     display: none;
   }
+  .header__white {
+   
+    margin: 0;
+  }
 }
 
 @media only screen and (max-width: 320px) {
   .header {
     max-width: 320px;
     height: 74px;
+    z-index: 1;
+    img {
+      margin-left: 30px;
+    }
+  }
+
+  .header__circle-main {
+    margin-left: -16px;
+    margin-top: 0px;
   }
   .header__nav {
     margin-right: 14px;
@@ -214,12 +285,16 @@
     margin-right: 14px;
   }
   .header__circle {
-    
     margin-top: 18px;
 
     img {
-      margin-left: 9px;
+      margin-left: 13px;
       margin-top: 9px;
     }
+  }
+
+  .header__white {
+   
+    margin: 0;
   }
 }

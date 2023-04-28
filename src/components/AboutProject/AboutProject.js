@@ -1,4 +1,20 @@
 function AboutProject() {
+  const asd = () => {
+    if (-[1]) {
+      if (document.body.offsetWidth > window.innerWidth) {
+        alert('Скролл есть');
+      } else {
+        alert('Скролла нет');
+      }
+    } else {
+      if (document.body.offsetHeight > document.documentElement.clientHeight) {
+        alert('Скролл есть');
+      } else {
+        alert('Скролла нет');
+      }
+    }
+  };
+
   return (
     <section className="about-project">
       <h2 className="about-project__title">О проекте</h2>

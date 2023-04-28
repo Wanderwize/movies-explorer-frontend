@@ -1,17 +1,21 @@
 .profile {
-  width: 1280px;
-  margin: 0 auto;
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  min-height: 937px;
+  align-items: center;
+  width: 100%;
+  height: 626px;
+  background-color: #ffffff;
 }
 
 .profile__container {
-  margin: 80px auto 22px;
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile__title {
+  margin-top: 75px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -19,13 +23,15 @@
   line-height: 29px;
   text-align: center;
   color: #000000;
-  margin-bottom: 123px;
+  margin-bottom: 110px;
 }
 
 .profile__name-container {
   display: flex;
   flex-direction: row;
-  width: 410px;
+  width: 100%;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
   justify-content: space-between;
   border-bottom: 1px solid #e8e8e8;
 
@@ -42,7 +48,7 @@
 .profile__email-container {
   display: flex;
   flex-direction: row;
-  width: 410px;
+  width: 100%;
   justify-content: space-between;
 
   p {
@@ -52,11 +58,13 @@
     font-size: 11px;
     line-height: 13px;
     color: #000000;
+    margin: 0;
   }
 }
 
 .profile__buttons {
   margin: 220px auto 70px;
+  margin-top: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,8 +81,13 @@
   line-height: 16px;
   text-decoration: none;
   text-align: center;
-
   color: #000000;
+  cursor: pointer;
+}
+
+.profile__button-edit:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .profile__button-logout {
@@ -88,27 +101,28 @@
   text-decoration: none;
   margin-top: 16px;
   text-align: center;
-
   color: #ff4062;
+  cursor: pointer;
+}
+
+.profile__button-logout:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
 }
 
 @media only screen and (max-width: 768px) {
   .profile {
-    max-width: 768px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
+    height: 950px;
   }
 
-  .profile__container {
-    margin: 80px auto 88px;
+  .profile__name-container {
+    padding-bottom: 0px;
   }
 
   .profile__email-container {
     display: flex;
     flex-direction: row;
-    width: 410px;
+
     justify-content: space-between;
     margin-top: 10px;
 
@@ -123,27 +137,23 @@
   }
 
   .profile__title {
-    margin-top: 130px;
+    margin-top: 210px;
     margin-bottom: 88px;
+  }
+  .profile__buttons {
+    margin: 207px auto 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.profile__buttons {
-  margin: 200px auto 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-@media only screen and (max-width: 320px) {
+
+@media only screen and (max-width: 440px) {
   .profile {
-    max-width: 320px;
-    min-height: 706px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
+    height: 780px;
   }
 
   .profile__container {
@@ -153,11 +163,13 @@
 
   .profile__email-container {
     max-width: 260px;
+    margin-top: 5px;
   }
 
   .profile__name-container {
     max-width: 260px;
     margin-top: -10px;
+    padding-bottom: 5px;
   }
 
   .profile__title {
@@ -166,7 +178,8 @@
     margin-bottom: 80px;
   }
   .profile__buttons {
-    margin: 370px auto 40px;
+    margin: 380px auto 40px;
+    margin-bottom: 0px;
     font-size: 12px;
     line-height: 15px;
   }

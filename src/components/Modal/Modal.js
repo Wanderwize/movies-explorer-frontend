@@ -11,8 +11,8 @@ function Modal() {
       : false;
 
   return (
-    <section className="modal__sidebar">
-      <div className={!modalIsOpen ? 'modal' : 'modal__off'}>
+    <section className="modal modal__sidebar">
+      <div className={!modalIsOpen ? 'modal__overlay' : 'modal__off'}>
         <div className="modal__container">
           <div className="modal__container-link">
             <a className="modal__link" href="/" target="_blank">

@@ -35,6 +35,12 @@
   outline: none;
   border: none;
   transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.movies__card_button-like:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .movies__card_button-unlike {
@@ -47,6 +53,12 @@
   border-radius: 36px;
   outline: none;
   border: none;
+  cursor: pointer;
+}
+
+.movies__card_button-unlike:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .movies__card_button-delete {
@@ -59,9 +71,15 @@
   border-radius: 36px;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
-.movies__list_card-name {
+.movies__card_button-delete:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.movies__card-list-name {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -86,6 +104,19 @@
     img {
       width: 339px;
       height: 190px;
+    }
+  }
+}
+
+@media only screen and (max-width: 387px) {
+  .movies__card {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    img {
+      width: 100%;
+      height: 168px;
+      margin: 0 auto;
     }
   }
 }

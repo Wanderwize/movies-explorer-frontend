@@ -13,7 +13,7 @@ function MoviesCard(props) {
   return (
     <div className="movies__card">
       <img src={image1} alt="" />
-      <div className="movies__list_card-name">
+      <div className="movies__card-list-name">
         <h2>{props.text}</h2>
         {!currentUrl ? (
           <button

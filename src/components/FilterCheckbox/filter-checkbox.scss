@@ -3,15 +3,15 @@
   flex-direction: row;
   align-items: end;
   justify-content: center;
-  border-bottom: 1px solid #E8E8E8;
-  width: 1140px;
+  border-bottom: 1px solid #e8e8e8;
+  width: calc((1140 / 1280) * 100%);
   margin: 0 auto;
 }
 
 .filter-checkbox__container {
   margin: 0 auto;
   margin-bottom: 40px;
- 
+
   p {
     margin: 0 auto;
     margin-left: 12px;
@@ -21,8 +21,6 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    /* identical to box height, or 150% */
-
     color: #000000;
   }
 }
@@ -76,15 +74,15 @@
 
 @media only screen and (max-width: 768px) {
   .filter-checkbox {
-    width: 708px;
     margin-bottom: 60px;
+    width: calc((708 / 768) * 100%);
   }
 }
 
 @media only screen and (max-width: 320px) {
   .filter-checkbox {
     margin-top: 10px;
-    width: 320px;
+   
     margin-bottom: 0px;
   }
 }

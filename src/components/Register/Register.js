@@ -26,7 +26,7 @@ function Register() {
             <p className="register__input-title">Пароль</p>
             <input
               style={{ color: 'red' }}
-              className="register__input"
+              className="register__input register__input-last"
               type="password"
             />
             <span className="register__error">Что-то пошло не так...</span>
