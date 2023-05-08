@@ -4,6 +4,30 @@
   display: flex;
   flex-direction: row;
   align-self: center;
+  flex-wrap: wrap;
+}
+
+.search-form-error {
+  align-self: flex-start;
+  margin-left: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  color: #ff4062;
+  width: 100%;
+}
+
+.search-form__input-error {
+margin: 0 auto;
+margin-left: 570px;
+margin-right: 570px;
+height: 20px;
+
+white-space: nowrap;
 }
 
 .search-form__container {
