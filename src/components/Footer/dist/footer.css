@@ -1,0 +1,136 @@
+.footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.footer__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__title {
+  padding-top: 204px;
+  padding-bottom: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #a0a0a0;
+  max-width: 1140px;
+  margin: 0 auto 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.footer__subtitles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__year {
+  margin: 20px 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.footer__praktikum {
+  margin-right: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+  color: #000000;
+}
+
+.footer__github {
+  margin-right: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+  color: #000000;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    max-width: 768px;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+
+  .footer__title {
+    max-width: 708px;
+    padding-top: 159px;
+  }
+
+  .footer__container {
+    max-width: 708px;
+  }
+
+  .footer__github {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer {
+    max-width: 320px;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+
+  .footer__title {
+    max-width: 300px;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__year {
+    font-size: 12px;
+    line-height: 15px;
+    order: 1;
+    margin-top: 17px;
+  }
+
+  .footer__subtitles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__praktikum {
+    font-size: 12px;
+    line-height: 15px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+
+  .footer__github {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

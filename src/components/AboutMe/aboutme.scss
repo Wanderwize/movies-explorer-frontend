@@ -1,0 +1,260 @@
+.aboutme {
+  margin: 0px auto;
+  margin-top: 10px;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.aboutme__about {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #000;
+  width: calc((1140 / 1280) * 100%);
+  margin-top: 100px;
+  margin-left: 70px;
+}
+
+.aboutme__info {
+  width: calc((1140 / 1280) * 100%);
+  margin-left: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.aboutme__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.aboutme__name {
+  margin: 0;
+  margin-top: 66px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+  margin-top: 66px;
+
+  letter-spacing: -0.04em;
+
+  color: #000000;
+}
+
+.aboutme__title {
+  margin: 0;
+  margin-top: 18px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height, or 111% */
+
+  color: #000000;
+
+  mix-blend-mode: normal;
+}
+
+.aboutme__subtitle {
+  margin: 0;
+  margin-top: 26px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  /* or 157% */
+
+  color: #000000;
+
+  mix-blend-mode: normal;
+}
+
+.aboutme__link {
+  margin: 0;
+  margin-top: 99px;
+  margin-bottom: 90px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.aboutme__link:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.aboutme__image {
+  max-width: 270px;
+  margin: 0;
+  margin-top: -30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutme__about {
+    width: calc((668 / 768) * 100%);
+    margin-left: 47px;
+    margin-top: 73px;
+  }
+  .aboutme__name {
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 67px;
+  }
+  .aboutme__title {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 15px;
+  }
+
+  .aboutme__subtitle {
+    margin-top: 20px;
+    margin-right: 49px;
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 364px;
+  }
+  .aboutme__image {
+    max-width: 255px;
+    margin: 0;
+    margin-right: 20px;
+    margin-top: 66px;
+    align-self: start;
+  }
+
+  .aboutme__info {
+    margin-left: 50px;
+  }
+
+  .aboutme__link {
+    margin-bottom: 91px;
+    margin-top: 87px;
+  }
+}
+
+@media only screen and (max-width: 472px) {
+  .aboutme__info {
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 292px;
+  }
+
+  .aboutme__about {
+    max-width: 284px;
+    margin-left: 18px;
+    margin-top: 70px;
+    margin-bottom: 0;
+  }
+
+  .aboutme__name {
+    margin-top: 40px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .aboutme__title {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutme__subtitle {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutme__image {
+    align-self: auto;
+    order: 1;
+    max-width: 292px;
+    margin-right: 20px;
+  }
+
+  .aboutme__container {
+    order: 2;
+  }
+
+  .aboutme__link {
+    margin-bottom: 91px;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media only screen and (max-width: 367px) {
+  .aboutme__about {
+    margin-top: 130px;
+    padding-bottom: 30px;
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+  }
+
+  .aboutme__title {
+    margin-top: 18px;
+  }
+
+  .aboutme__name {
+    margin-top: 40px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .aboutme__link {
+    margin-bottom: 65px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .aboutme__info {
+    margin: 0 auto;
+    flex-direction: column;
+    width: calc((292 / 320) * 100%);
+
+    img {
+      margin-top: 58px;
+      width: 100%;
+    }
+  }
+
+  .aboutme__subtitle {
+    max-width: 292px;
+    margin-right: 0px;
+
+    p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 16px;
+      /* or 145% */
+
+      color: #000000;
+
+      mix-blend-mode: normal;
+    }
+  }
+
+  .aboutme__link {
+    margin-bottom: 65px;
+    margin-top: 40px;
+  }
+}

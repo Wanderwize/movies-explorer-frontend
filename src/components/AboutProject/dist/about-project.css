@@ -1,0 +1,237 @@
+.about-project {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.about-project__subtitles {
+  display: flex;
+}
+.about-project__subtitles div {
+  max-width: 550px;
+  margin-left: 70px;
+  margin-top: 70px;
+}
+.about-project__subtitles div h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  margin-top: 0;
+  color: #000000;
+}
+.about-project__subtitles div p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  color: #000000;
+}
+
+.about-project__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #000;
+  max-width: 1140px;
+  margin-left: 70px;
+  margin-top: 0;
+  padding-top: 110px;
+}
+
+.about-project__border {
+  border-bottom: 1px solid #000000;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.about-project__roadmap {
+  display: flex;
+  flex-direction: row;
+  margin: 110px auto 14px;
+  max-width: 1140px;
+}
+
+.about-project__sides {
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+  max-width: 1140px;
+  margin-bottom: 110px;
+}
+
+.about-project__back {
+  width: 228px;
+  height: 36px;
+}
+.about-project__back p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height, or 121% */
+  text-align: center;
+  margin: 0;
+  color: #a0a0a0;
+}
+
+.about-project__front {
+  width: 912px;
+  height: 36px;
+}
+.about-project__front p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height, or 121% */
+  margin: 0;
+  text-align: center;
+  color: #a0a0a0;
+}
+
+.about-project__roadmap-1 {
+  width: 228px;
+  height: 36px;
+  background-color: #000000;
+  margin-right: 0;
+}
+.about-project__roadmap-1 p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 9px 0;
+  color: #ffffff;
+}
+
+.about-project__roadmap-4 {
+  width: 912px;
+  height: 36px;
+  background-color: #f2f2f2;
+}
+.about-project__roadmap-4 p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 9px 0;
+  color: #000000;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-project__border {
+    max-width: 668px;
+  }
+
+  .about-project__roadmap {
+    max-width: 668px;
+  }
+
+  .about-project__sides {
+    max-width: 668px;
+  }
+}
+@media only screen and (max-width: 456px) {
+  .about-project__title {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 284px;
+    margin: 0;
+    margin-left: 18px;
+    padding-top: 70px;
+  }
+
+  .about-project__subtitles {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-project__subtitles div {
+    max-width: 284px;
+    margin-left: 18px;
+    margin-top: 60px;
+  }
+  .about-project__subtitles div h3 {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+  }
+  .about-project__subtitles div p {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .about-project__roadmap {
+    max-width: 284px;
+  }
+
+  .about-project__sides {
+    max-width: 284px;
+  }
+
+  .about-project__roadmap-1 {
+    width: 100px;
+    height: 35px;
+  }
+  .about-project__roadmap-1 p {
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    margin: 11px 0;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .about-project__roadmap-4 {
+    width: 184px;
+    height: 35px;
+    background-color: #f2f2f2;
+  }
+  .about-project__roadmap-4 p {
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    margin: 11px 0;
+    color: #000000;
+    text-align: center;
+  }
+
+  .about-project__back {
+    width: 100px;
+    height: 35px;
+  }
+  .about-project__back p {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: #a0a0a0;
+  }
+
+  .about-project__front {
+    width: 184px;
+    height: 35px;
+  }
+  .about-project__front p {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: #a0a0a0;
+  }
+}

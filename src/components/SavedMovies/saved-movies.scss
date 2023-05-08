@@ -1,0 +1,19 @@
+.saved-movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  .saved-movies {
+   
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .saved-movies {
+  
+  }
+}

@@ -1,0 +1,131 @@
+@media only screen and (min-width: 769px) {
+  .modal__sidebar {
+    display: none;
+    opacity: 0;
+  }
+
+  .modal {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.15s, opacity 0.15s linear;
+  }
+
+  .modal__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 520px;
+    height: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    z-index: 1000;
+  }
+
+  .modal__link {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 72px;
+    align-self: center;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 28px;
+    text-decoration: none;
+  }
+
+  .modal__link:nth-of-type(2) {
+    border-bottom: 2px solid #000000;
+  }
+
+  .modal__close-button {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .modal__off {
+    transition: visibility 0s, opacity 0.3s linear;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .modal__container-link {
+    display: flex;
+    flex-direction: column;
+    margin-top: 159px;
+  }
+
+  .modal__container-account {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 500px;
+    margin-bottom: 92px;
+  }
+
+  .modal__image-account {
+    width: 26px;
+    height: 30px;
+    margin-left: 25px;
+  }
+
+  .modal__link-account {
+    text-decoration: none;
+    align-self: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+
+  .modal__menu-button {
+    position: fixed;
+    right: 30px;
+    top: 15px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .modal {
+    height: 100%;
+    width: 100%;
+  }
+
+  .modal__container {
+    margin: 0 auto;
+    max-width: 320px;
+    max-height: 780px;
+  }
+
+  .modal__container-link {
+    margin-top: 144px;
+  }
+
+  .modal__container-account {
+    margin-top: 396px;
+    margin-bottom: 48px;
+  }
+}

@@ -1,0 +1,280 @@
+.register {
+  background-color: #ffffff;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 70px;
+}
+
+.register__container {
+  width: 396px;
+  margin: 0 auto;
+
+  a:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+.register__circle {
+}
+
+.register__form {
+  width: 100%;
+}
+
+.register__title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+
+.register__input-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #a0a0a0;
+}
+
+.register__input {
+  width: 100%;
+  height: 46px;
+  background: #f9f9f9;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+
+.register__input-last {
+  margin-bottom: 3px;
+}
+
+.register__input:focus {
+  border: 2px solid rgba(0, 153, 255, 0.493);
+}
+
+.register__input-container {
+  width: 100%;
+}
+
+.register__input-container:last-of-type {
+  margin-top: 0px;
+}
+
+.register__button-login {
+  width: 100%;
+  height: 46px;
+  margin-top: 165px;
+  background-color: #000000;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.register__button-login:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.register__button-register {
+  width: 100%;
+  height: 46px;
+  margin-top: 65px;
+  background-color: #000000;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.register__button-register:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.register__form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin-right: 6px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #a0a0a0;
+  }
+
+  a {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  a:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+.register__error {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+
+  color: #ff4062;
+}
+
+@media only screen and (max-width: 768px) {
+  .register {
+    padding-top: 232px;
+  }
+
+  .register__input-title {
+    margin-bottom: 11px;
+  }
+
+  .register__button-login {
+    margin-top: 173px;
+  }
+
+  .register__button-register {
+    margin-top: 65px;
+  }
+
+  .register__input-container {
+    margin-top: 1px;
+  }
+
+  .register__input {
+  }
+
+  .register__form {
+    margin-top: 35px;
+  }
+
+  .register__input {
+    margin-bottom: 7px;
+  }
+
+  .register__button {
+    margin-top: 65px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .register__container {
+    width: calc((260 / 320) * 100%);
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .register {
+    padding-top: 56px;
+  }
+
+  .register__input-title {
+    margin-bottom: 9px;
+  }
+
+  .register__container {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin: 0 auto;
+    }
+
+    img {
+      width: 38px;
+      margin: 0 auto;
+      align-self: center;
+    }
+  }
+
+  .register__title {
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  .register__input-container {
+    // max-width: 260px;
+  }
+  .register__input {
+    // max-width: 260px;
+  }
+  .register__button {
+    // max-width: 260px;
+    margin-top: 150px;
+  }
+
+  .register__button-login {
+    // max-width: 260px;
+    margin-top: 255px;
+    margin-bottom: 0px;
+  }
+
+  .register__button-register {
+    // max-width: 260px;
+    margin-top: 150px;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    text-align: center;
+  }
+
+  .register__form {
+    // max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .register__form-footer {
+    margin-top: 5px;
+    p {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    a {
+      margin: 0;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
