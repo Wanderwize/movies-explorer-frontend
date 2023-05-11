@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import * as auth from '../../auth';
 import { useFormWithValidation } from '../UseForm/UseForm';
 
-function Login({ handleLogin, moviesRequest, setLoggedIn, onLogin }) {
+function Login({ handleLogin, moviesRequest, setLoggedIn, onLogin, formError }) {
   const [name, setName] = React.useState('');
   const navigate = useNavigate();
 
@@ -22,6 +22,9 @@ function Login({ handleLogin, moviesRequest, setLoggedIn, onLogin }) {
     onLogin({ email, password });
   };
 
+  const urlRegexEmail =
+  /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
   return (
     <section className="register">
       <div className="register__container">
@@ -35,7 +38,7 @@ function Login({ handleLogin, moviesRequest, setLoggedIn, onLogin }) {
             <input
               id="email"
               value={values.email || ''}
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}"
+              pattern={urlRegexEmail}
               onChange={handleChange}
               name="email"
               className="register__input"
@@ -60,6 +63,7 @@ function Login({ handleLogin, moviesRequest, setLoggedIn, onLogin }) {
               {errors.password}
             </span>
           </div>
+          {formError && <span style ={{color: 'red', paddingTop: '5px'}}>{formError}</span>}
           <button
             disabled={!isValid}
             className={

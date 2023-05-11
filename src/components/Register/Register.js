@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import * as auth from '../../auth';
 import { useFormWithValidation } from '../UseForm/UseForm';
 
-const Register = ({ onUpdateUser, setLoggedIn, onRegister }) => {
+const Register = ({ onUpdateUser, setLoggedIn, onRegister, formError }) => {
   const [name, setName] = React.useState('');
   const navigate = useNavigate();
 
@@ -22,6 +22,8 @@ const Register = ({ onUpdateUser, setLoggedIn, onRegister }) => {
     onRegister({ email, password, name });
     console.log(email, password, name);
   }
+
+  const urlRegexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
   return (
     <section className="register">
@@ -52,12 +54,13 @@ const Register = ({ onUpdateUser, setLoggedIn, onRegister }) => {
             <input
               id="email"
               value={values.email || ''}
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}"
+              pattern={!urlRegexEmail}
               onChange={handleChange}
               name="email"
               className="register__input"
               type="email"
               required
+           
             />
             <span id="profile__input-error" className="profile__input-error">
               {errors.email}
@@ -79,6 +82,7 @@ const Register = ({ onUpdateUser, setLoggedIn, onRegister }) => {
               {errors.password}
             </span>
           </div>
+          {formError && <span style ={{color: 'red', paddingTop: '5px'}}>{formError}</span>}
           <button
             type="submit"
             disabled={!isValid}
@@ -89,7 +93,9 @@ const Register = ({ onUpdateUser, setLoggedIn, onRegister }) => {
             }
           >
             Зарегистрироваться
+          
           </button>
+      
         </form>
         <div className="register__form-footer">
           <p>Уже зарегистрированы?</p>

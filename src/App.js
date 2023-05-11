@@ -29,6 +29,7 @@ function App() {
   const [favoriteMoves, setFavoriteMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+  const [formError, setFormError] = useState('');
   const [isChecked, setIsChecked] = useState(
     localStorage.getItem('isChecked') === 'true'
   );
@@ -85,11 +86,15 @@ function App() {
   }, [loggedIn, filteredMovies]);
 
   function onRegister({ email, password, name }) {
-    auth.register(email, password, name).then((res) => {
-      onLogin({ email, password });
-      setLoggedIn(true);
-      navigate('/movies', { replace: true });
-    });
+    auth
+      .register(email, password, name)
+      .then((res) => {
+        onLogin({ email, password });
+      })
+      .catch((err) => {
+        console.log(err);
+        setFormError('Некорректный логин или пароль');
+      });
   }
 
   function onLogin({ email, password }) {
@@ -106,6 +111,7 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
+        setFormError('Некорректный логин или пароль');
       });
   }
 
@@ -295,6 +301,7 @@ function App() {
                 onLogin={onLogin}
                 handleLogin={handleLogin}
                 setLoggedIn={setLoggedIn}
+                formError={formError}
               />
             }
           />
@@ -302,6 +309,7 @@ function App() {
             path="/sign-up"
             element={
               <Register
+                formError={formError}
                 onRegister={onRegister}
                 onUpdateUser={handleUpdateUser}
                 setCurrentName={setCurrentName}
