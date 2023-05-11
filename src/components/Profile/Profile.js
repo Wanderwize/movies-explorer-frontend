@@ -12,6 +12,7 @@ function Profile({ setLoggedIn }) {
   const [showMessage, setShowMessage] = useState(false);
   const [isFocus, setIsFocus] = useState(true);
   const [profileName, setProfileName] = useState(context.name);
+  const [profileEmail, setProfileEmail] = useState(context.email);
   const [uniqueName, setUniqueName] = useState(true);
   const [isChangeValue, setIsChangeValue] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -34,6 +35,7 @@ function Profile({ setLoggedIn }) {
       .pushUserInfo({ name, email })
       .then(() => {
         setProfileName(name);
+        setProfileEmail(email);
         setIsFocus(true);
         showSuccessMessage();
       })
@@ -67,13 +69,9 @@ function Profile({ setLoggedIn }) {
     localStorage.removeItem('filteredMovies');
     localStorage.removeItem('favoriteMovies');
     localStorage.removeItem('loggedIn');
-    setLoggedIn(false)
+    setLoggedIn(false);
     navigate('/sign-in');
   }
-
-  useEffect(() => {
-    setProfileName(values.name || '');
-  }, [values.name]);
 
   useEffect(() => {
     setIsFocus(!isValid);
@@ -88,13 +86,8 @@ function Profile({ setLoggedIn }) {
   }, [context.name]);
 
   useEffect(() => {
-    if (showMessage || errorStatus) {
-      const timeout = setTimeout(() => {
-        window.location.reload();
-      }, 3000);
-      return () => clearTimeout(timeout);
-    }
-  }, [showMessage, errorStatus]);
+    setProfileEmail(context.email);
+  }, [context.email]);
 
   return (
     <section className="profile">
@@ -142,12 +135,9 @@ function Profile({ setLoggedIn }) {
         </span>
         <div className="profile__buttons">
           <button
-            disabled={!isValid || isFocus}
+            disabled={!isValid}
             className={
-              !isValid ||
-              isFocus ||
-              values.name === context.name ||
-              values.email === context.email
+              values.name === profileName || values.email === profileEmail
                 ? 'profile__button-edit profile__button-edit-disbled'
                 : 'profile__button-edit'
             }
