@@ -6,7 +6,7 @@ import api from '../../utils/Api';
 
 import { useFormWithValidation } from '../UseForm/UseForm';
 
-function Profile({ setLoggedIn }) {
+function Profile({ setLoggedIn, setEmptyMessage }) {
   const context = useContext(CurrentUserContext);
   const navigate = useNavigate();
   const [showMessage, setShowMessage] = useState(false);
@@ -65,12 +65,12 @@ function Profile({ setLoggedIn }) {
     localStorage.removeItem('movies');
     localStorage.removeItem('isChecked');
     localStorage.removeItem('query');
-    localStorage.removeItem('query');
     localStorage.removeItem('filteredMovies');
     localStorage.removeItem('favoriteMovies');
     localStorage.removeItem('loggedIn');
     setLoggedIn(false);
     navigate('/sign-in');
+    setEmptyMessage(false);
   }
 
   useEffect(() => {

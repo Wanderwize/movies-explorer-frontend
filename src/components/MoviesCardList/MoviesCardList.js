@@ -15,7 +15,10 @@ function MoviesCardList({
   isChecked,
   handleLike,
   isSavedMoviesChecked,
-  setIsSavedMoviesChecked
+  setIsSavedMoviesChecked,
+  emptyMessage,
+  inputValue,
+  setEmptyMessage,
 }) {
   const [displayedProductCount, setDisplayedProductCount] = useState(0);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -23,6 +26,7 @@ function MoviesCardList({
   const [allCards, setAllCards] = useState([]);
 
   const currentUrl = window.location.pathname === '/movies' ? true : false;
+  const savedUrl = window.location.pathname === '/saved-movies' ? true : false;
 
   useEffect(() => {
     function handleResize() {
@@ -33,6 +37,12 @@ function MoviesCardList({
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (renderCards.length === 0) {
+      setEmptyMessage(!emptyMessage);
+    }
+  }, [renderCards]);
 
   useEffect(() => {
     function handleResize() {
@@ -74,15 +84,24 @@ function MoviesCardList({
     }
   };
 
+  const currentQuery = localStorage.getItem('query');
+
   return (
     <div className="movies-card-list">
       <div className="movies-card-list__container0">
         <div className="movies-card-list__container">
-          {renderCards.length === 0 ? (
+          {savedUrl && renderCards.length === 0 ? (
+            <p className="movies-card-list__empty">Здесь пока ничего нет</p>
+          ) : (
+            ''
+          )}
+          {renderCards.length === 0 && currentUrl && currentQuery ? (
             <p className="movies-card-list__empty">Ничего не найдено</p>
           ) : (
             renderCards
-              .filter((movie) => (isChecked || isSavedMoviesChecked ? movie.duration < 40 : true))
+              .filter((movie) =>
+                isChecked || isSavedMoviesChecked ? movie.duration < 40 : true
+              )
               .slice(0, displayedProductCount)
               .map((movie, key) => (
                 <MoviesCard

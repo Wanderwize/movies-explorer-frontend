@@ -18,6 +18,9 @@ function Movies({
   setIsLoading,
   isSavedMoviesChecked,
   setIsSavedMoviesChecked,
+  emptyMessage,
+  inputValue,
+  setEmptyMessage,
 }) {
   const [renderCards, setRenderCards] = useState([]);
 
@@ -66,6 +69,9 @@ function Movies({
           handleLike={handleLike}
           isSavedMoviesChecked={isSavedMoviesChecked}
           setIsSavedMoviesChecked={setIsSavedMoviesChecked}
+          emptyMessage={emptyMessage}
+          inputValue={inputValue}
+          setEmptyMessage={setEmptyMessage}
         />
       )}
 

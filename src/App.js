@@ -30,6 +30,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [formError, setFormError] = useState('');
+  const [emptyMessage, setEmptyMessage] = useState(false);
   const [isChecked, setIsChecked] = useState(
     localStorage.getItem('isChecked') === 'true'
   );
@@ -131,6 +132,7 @@ function App() {
     );
     localStorage.setItem('filteredMovies', JSON.stringify(filteredMovies));
     setFilteredMovies(filteredMovies);
+    setEmptyMessage(true);
     setSavedMoviesQuery(true);
     setIsLoading(true);
     setTimeout(() => {
@@ -256,6 +258,9 @@ function App() {
                 handleLike={handleClickLike}
                 isLoading={isLoading}
                 setIsLoading={setIsLoading}
+                emptyMessage={emptyMessage}
+                inputValue = {inputValue}
+                setEmptyMessage = {setEmptyMessage}
               />
             }
           />
@@ -281,6 +286,8 @@ function App() {
                 inputValue={inputValue}
                 isLoading={isLoading}
                 setIsLoading={setIsLoading}
+                emptyMessage={emptyMessage}
+                setEmptyMessage = {setEmptyMessage}
               />
             }
           />
@@ -294,6 +301,7 @@ function App() {
                 currentEmail={currentEmail}
                 currentName={currentName}
                 setLoggedIn={setLoggedIn}
+                setEmptyMessage={setEmptyMessage}
               />
             }
           />

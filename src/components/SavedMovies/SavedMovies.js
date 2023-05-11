@@ -26,6 +26,8 @@ function SavedMovies({
   setIsLoading,
   isSavedMoviesChecked,
   setIsSavedMoviesChecked,
+  emptyMessage,
+  setEmptyMessage,
 }) {
   const [test, setTest] = useState([]);
 
@@ -104,6 +106,8 @@ function SavedMovies({
           handleLike={handleLike}
           isSavedMoviesChecked={isSavedMoviesChecked}
           setIsSavedMoviesChecked={setIsSavedMoviesChecked}
+          emptyMessage={emptyMessage}
+          setEmptyMessage={setEmptyMessage}
         />
       )}
 
