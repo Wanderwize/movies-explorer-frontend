@@ -89,10 +89,13 @@ function App() {
     auth
       .register(email, password, name)
       .then((res) => {
-        onLogin({ email, password });
+        if (!res.err) {
+          onLogin({ email, password });
+        } else {
+          setFormError('Почта уже существует');
+        }
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((res, err) => {
         setFormError('Некорректный логин или пароль');
       });
   }

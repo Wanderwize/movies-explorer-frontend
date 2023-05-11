@@ -60,7 +60,7 @@ const Register = ({ onUpdateUser, setLoggedIn, onRegister, formError }) => {
               className="register__input"
               type="email"
               required
-           
+          
             />
             <span id="profile__input-error" className="profile__input-error">
               {errors.email}
@@ -82,7 +82,13 @@ const Register = ({ onUpdateUser, setLoggedIn, onRegister, formError }) => {
               {errors.password}
             </span>
           </div>
-          {formError && <span style ={{color: 'red', paddingTop: '5px'}}>{formError}</span>}
+          {formError && (
+            <span
+              style={{ color: 'red', paddingTop: '5px', fontFamily: 'Inter' }}
+            >
+              {formError}
+            </span>
+          )}
           <button
             type="submit"
             disabled={!isValid}
@@ -93,9 +99,7 @@ const Register = ({ onUpdateUser, setLoggedIn, onRegister, formError }) => {
             }
           >
             Зарегистрироваться
-          
           </button>
-      
         </form>
         <div className="register__form-footer">
           <p>Уже зарегистрированы?</p>
