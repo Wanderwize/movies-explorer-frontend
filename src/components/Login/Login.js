@@ -25,7 +25,7 @@ function Login({ handleLogin, moviesRequest, setLoggedIn, onLogin }) {
   return (
     <section className="register">
       <div className="register__container">
-        <a href="/" target="_blank">
+        <a href="/">
           <img src={headerCircle} alt="" />
         </a>
         <h2 className="register__title">Рады видеть!</h2>

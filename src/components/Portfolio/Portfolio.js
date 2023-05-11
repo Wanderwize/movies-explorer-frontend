@@ -7,11 +7,9 @@ function Portfolio() {
       <div>
         <a
           className="portfolio__link"
-          target="_blank"
           href="https://github.com/Wanderwize/russian-travel"
         >
           <p
-            target="_blank"
             href="https://github.com/Wanderwize/how-to-learn"
             className="portfolio__item"
           >
@@ -23,11 +21,9 @@ function Portfolio() {
       <div>
         <a
           className="portfolio__link"
-          target="_blank"
           href="https://github.com/Wanderwize/russian-travel"
         >
           <p
-            target="_blank"
             href="https://github.com/Wanderwize/russian-travel"
             className="portfolio__item"
           >
@@ -39,7 +35,6 @@ function Portfolio() {
       <div>
         <a
           className="portfolio__link"
-          target="_blank"
           href="https://github.com/Wanderwize/russian-travel"
         >
           <p className="portfolio__item">Одностраничное приложение</p>

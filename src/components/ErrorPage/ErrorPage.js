@@ -5,7 +5,7 @@ function ErrorPage() {
     <section className="error-page">
       <h2 className="error-page__title">404</h2>
       <p className="error-page__subtitle">Страница не найдена</p>
-      <a className="error-page__link" href="/" target="_blank">
+      <a className="error-page__link" href="/">
         Назад
       </a>
     </section>

@@ -38,9 +38,10 @@ function MoviesCard({
 
   return (
     <div className="movies__card">
-      <a href={movies.trailerLink}>
+      <a target="_blank" href={movies.trailerLink}>
         {' '}
-        <img className='movies__card-img'
+        <img
+          className="movies__card-img"
           src={
             currentUrl
               ? `https://api.nomoreparties.co${movies.image.url}`

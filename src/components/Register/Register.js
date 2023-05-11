@@ -5,7 +5,6 @@ import * as auth from '../../auth';
 import { useFormWithValidation } from '../UseForm/UseForm';
 
 const Register = ({ onUpdateUser, setLoggedIn, onRegister }) => {
-
   const [name, setName] = React.useState('');
   const navigate = useNavigate();
 
@@ -17,8 +16,6 @@ const Register = ({ onUpdateUser, setLoggedIn, onRegister }) => {
     setName(evt.target.value || '');
   }
 
-
-
   function handleSubmit(e) {
     e.preventDefault();
     const { email, password, name } = values;
@@ -29,7 +26,7 @@ const Register = ({ onUpdateUser, setLoggedIn, onRegister }) => {
   return (
     <section className="register">
       <div className="register__container">
-        <a href="/" target="_blank">
+        <a href="/">
           <img src={headerCircle} alt="" />
         </a>
         <h2 className="register__title">Добро пожаловать!</h2>
