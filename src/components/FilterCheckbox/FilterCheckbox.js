@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react';
 
-function FilterCheckbox({ setIsChecked, isChecked }) {
+function FilterCheckbox({ setIsChecked, isChecked, isLoading, setIsLoading }) {
   useEffect(() => {
     localStorage.setItem('isChecked', isChecked);
   }, [isChecked]);
 
   const checkboxToggle = () => {
     setIsChecked((prevIsChecked) => !prevIsChecked);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   };
 
   return (

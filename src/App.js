@@ -22,12 +22,12 @@ function App() {
   const [currentName, setCurrentName] = React.useState('');
   const [currentEmail, setCurrentEmail] = React.useState('');
   const [loggedIn, setLoggedIn] = React.useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [inputValue, setInputValue] = useState('');
   const [localQuery, setLocalQuery] = useState('');
   const [savedMovieQuery, setSavedMoviesQuery] = React.useState(false);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [favoriteMoves, setFavoriteMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [isChecked, setIsChecked] = useState(
     localStorage.getItem('isChecked') === 'true'
@@ -108,6 +108,10 @@ function App() {
       });
   }
 
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 1000);
+  }, []);
+
   const handleSubmit = (query) => {
     setInputValue(query);
     localStorage.setItem('query', query);
@@ -118,6 +122,10 @@ function App() {
     localStorage.setItem('filteredMovies', JSON.stringify(filteredMovies));
     setFilteredMovies(filteredMovies);
     setSavedMoviesQuery(true);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   };
 
   const handleLogin = (e) => {
@@ -220,6 +228,8 @@ function App() {
                 filteredMovies={filteredMovies}
                 handleSubmit={handleSubmit}
                 handleLike={handleClickLike}
+                isLoading={isLoading}
+                setIsLoading = {setIsLoading}
               />
             }
           />
@@ -241,6 +251,8 @@ function App() {
                 savedMovieQuery={savedMovieQuery}
                 setSavedMoviesQuery={setSavedMoviesQuery}
                 inputValue={inputValue}
+                isLoading={isLoading}
+                setIsLoading = {setIsLoading}
               />
             }
           />

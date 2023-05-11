@@ -5,6 +5,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import MoviesApi from '../../utils/MoviesApi';
 import Preloader from '../Preloader/Preloader';
+import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import api, { Api } from '../../utils/Api';
 
 function SavedMovies({
@@ -21,16 +22,9 @@ function SavedMovies({
   inputValue,
   savedMovieQuery,
   setSavedMoviesQuery,
+  isLoading,
+  setIsLoading,
 }) {
-  const MoviesCardList = lazy(() => {
-    return new Promise((resolve) =>
-      setTimeout(
-        () => resolve(import('../MoviesCardList/MoviesCardList')),
-        1000
-      )
-    );
-  });
-
   const [test, setTest] = useState([]);
 
   useEffect(() => {
@@ -41,7 +35,7 @@ function SavedMovies({
     if (savedMovieQuery === true) {
       setTest(filteredSavedMovies);
       console.log(savedMovieQuery);
-      console.log('123')
+      console.log('123');
     } else {
       setTest(favoriteMoves);
       console.log(savedMovieQuery);
@@ -94,18 +88,24 @@ function SavedMovies({
         movies={movies}
         filteredMovies={filteredMovies}
       />
-      <FilterCheckbox setIsChecked={setIsChecked} isChecked={isChecked} />
-      <Suspense fallback={<Preloader />}>
+      <FilterCheckbox
+        setIsChecked={setIsChecked}
+        isChecked={isChecked}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
+      />
+      {isLoading && <Preloader />}
+      {isLoading || !test ? null : (
         <MoviesCardList
           isChecked={isChecked}
           filteredMovies={favoriteMoves}
           favoriteMoves={favoriteMoves}
           handleClickDislike={handleClickDislike}
-          // renderCards={favoriteMoves}
           renderCards={test}
           handleLike={handleLike}
         />
-      </Suspense>
+      )}
+
       <Footer />
     </section>
   );

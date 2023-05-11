@@ -5,6 +5,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import MoviesApi from '../../utils/MoviesApi';
 import Preloader from '../Preloader/Preloader';
+import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
 function Movies({
   setIsChecked,
@@ -13,6 +14,8 @@ function Movies({
   filteredMovies,
   handleSubmit,
   handleLike,
+  isLoading,
+  setIsLoading
 }) {
   const [renderCards, setRenderCards] = useState([]);
 
@@ -20,6 +23,7 @@ function Movies({
     const cardsToRender = JSON.parse(localStorage.getItem('filteredMovies'));
     if (cardsToRender) {
       setRenderCards(cardsToRender);
+
       console.log('локальное');
     } else {
       setRenderCards(filteredMovies);
@@ -28,32 +32,32 @@ function Movies({
     }
   }, [filteredMovies]);
 
-  const MoviesCardList = lazy(() => {
-    return new Promise((resolve) =>
-      setTimeout(
-        () => resolve(import('../MoviesCardList/MoviesCardList')),
-        1000
-      )
-    );
-  });
+  // const MoviesCardList = lazy(() => {
+  //   return new Promise((resolve) =>
+  //     setTimeout(
+  //       () => resolve(import('../MoviesCardList/MoviesCardList')),
+  //       1000
+  //     )
+  //   );
+  // });
 
   return (
     <section className="movies">
       <Header />
       <SearchForm handleSubmit={handleSubmit} />
-      <FilterCheckbox setIsChecked={setIsChecked} isChecked={isChecked} />
+      <FilterCheckbox setIsChecked={setIsChecked} isChecked={isChecked} isLoading = {isLoading} setIsLoading = {setIsLoading} />
 
-      <Suspense fallback={<Preloader />}>
-        {!renderCards ? null : (
-          <MoviesCardList
-            isChecked={isChecked}
-            favoriteMoves={favoriteMoves}
-            filteredMovies={filteredMovies}
-            renderCards={renderCards}
-            handleLike={handleLike}
-          />
-        )}
-      </Suspense>
+      {isLoading && <Preloader />}
+      {isLoading || !renderCards ? null : (
+        <MoviesCardList
+          isChecked={isChecked}
+          favoriteMoves={favoriteMoves}
+          filteredMovies={filteredMovies}
+          renderCards={renderCards}
+          handleLike={handleLike}
+        />
+      )}
+
       <Footer />
     </section>
   );
