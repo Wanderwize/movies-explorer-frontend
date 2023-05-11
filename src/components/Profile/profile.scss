@@ -14,6 +14,32 @@
   align-items: center;
 }
 
+.profile__input-name {
+  border: none;
+  text-align: end;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+
+input:focus {
+  outline: none;
+}
+
+.profile__input-email {
+  border: none;
+  text-align: end;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+
 .profile__title {
   margin-top: 75px;
   font-family: 'Inter';
@@ -24,6 +50,32 @@
   text-align: center;
   color: #000000;
   margin-bottom: 110px;
+}
+
+.profile__input-error {
+  text-align: end;
+  align-self: flex-end;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ff4062;
+}
+
+.profile__input-error:nth-of-type(2) {
+  text-align: end;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ff4062;
 }
 
 .profile__name-container {
@@ -82,12 +134,62 @@
   text-decoration: none;
   text-align: center;
   color: #000000;
+  opacity: 1;
   cursor: pointer;
+}
+
+.profile__button-edit-disbled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.profile__success-message {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fade-in-out 4s linear;
+  color: #000000c2;
+  font-family: 'Inter';
+  border: none;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+
+.message {
+  animation: fade-in-out 3s linear;
+  opacity: 0;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .profile__button-edit:hover {
   opacity: 0.7;
   transition: opacity 0.2s ease-in-out;
+}
+
+.profile__button-edit:disabled:hover {
+  opacity: 0.3;
+  cursor: default;
+  transition: none;
 }
 
 .profile__button-logout {
@@ -148,8 +250,6 @@
     align-items: center;
   }
 }
-
-
 
 @media only screen and (max-width: 440px) {
   .profile {

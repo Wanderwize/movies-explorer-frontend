@@ -15,21 +15,21 @@ function Modal() {
       <div className={!modalIsOpen ? 'modal__overlay' : 'modal__off'}>
         <div className="modal__container">
           <div className="modal__container-link">
-            <a className="modal__link" href="/" target="_blank">
+            <a className="modal__link" href="/">
               Главная
             </a>
-            <a className="modal__link" href="/movies" target="_blank">
+            <a className="modal__link" href="/movies">
               Фильмы
             </a>
-            <a className="modal__link" href="/saved-movies" target="_blank">
+            <a className="modal__link" href="/saved-movies">
               Сохраненные фильмы
             </a>
           </div>
           <div className="modal__container-account">
-            <a className="modal__link-account" href="/profile" target="_blank">
+            <a className="modal__link-account" href="/profile">
               Аккаунт
             </a>
-            <a className="header__nav-icon" href="" target="_blank"></a>
+            <a className="header__nav-icon" href=""></a>
           </div>
           <img
             className="modal__close-button"

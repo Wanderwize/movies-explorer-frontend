@@ -5,6 +5,12 @@
   padding-top: 70px;
 }
 
+input:invalid {
+  border-color: red;
+  color: red($color: #fc0000)
+}
+
+
 .register__container {
   width: 396px;
   margin: 0 auto;
@@ -52,6 +58,7 @@
   margin-bottom: 10px;
   padding-left: 0;
 }
+
 
 .register__input-last {
   margin-bottom: 3px;
@@ -108,6 +115,27 @@
   text-align: center;
   color: #ffffff;
   cursor: pointer;
+
+}
+
+.register__button-disabled {
+  width: 100%;
+  height: 46px;
+  margin-top: 65px;
+  background-color: #000000;
+  opacity: 0.5;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.3;
+  cursor: default;
 }
 
 .register__button-register:hover {

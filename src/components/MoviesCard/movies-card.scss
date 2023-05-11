@@ -12,6 +12,7 @@
 }
 
 .movies__list_duration {
+  margin: 0;
   border-top: 1px solid #e8e8e8;
   font-family: 'Inter';
   font-style: normal;
@@ -22,6 +23,11 @@
   align-items: center;
   padding-top: 6px;
   color: #a0a0a0;
+}
+
+.movies__card-img:hover {
+  opacity: 0.7;
+  transition: opacity 0.15s ease-in-out;
 }
 
 .movies__card_button-like {
@@ -91,8 +97,11 @@
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
-
+    margin-bottom: 0px;
     color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

@@ -6,8 +6,8 @@ function Footer() {
       <div className='footer__container'>
         <p className='footer__year'>© 2020</p>
         <div className='footer__subtitles'>
-          <a href="https://practicum.yandex.ru/" target="_blank" className='footer__praktikum'>Яндекс.Практикум</a>
-          <a href="https://github.com/Wanderwize" target="_blank" className='footer__github'>Github</a>
+          <a href="https://practicum.yandex.ru/"  className='footer__praktikum'>Яндекс.Практикум</a>
+          <a href="https://github.com/Wanderwize"  className='footer__github'>Github</a>
         </div>
       </div>
     </section>
