@@ -32,6 +32,7 @@ function App() {
   const [isChecked, setIsChecked] = useState(
     localStorage.getItem('isChecked') === 'true'
   );
+  const [isSavedMoviesChecked, setIsSavedMoviesChecked] = useState(false);
 
   useEffect(() => {
     if (loggedIn in localStorage) {
@@ -120,6 +121,20 @@ function App() {
       movie.nameRU.toLowerCase().includes(query.toLowerCase())
     );
     localStorage.setItem('filteredMovies', JSON.stringify(filteredMovies));
+    setFilteredMovies(filteredMovies);
+    setSavedMoviesQuery(true);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  };
+
+  const handleSubmitSavedPage = (query) => {
+    setInputValue(query);
+    const localMoviesData = JSON.parse(localStorage.getItem('movies'));
+    const filteredMovies = localMoviesData.filter((movie) =>
+      movie.nameRU.toLowerCase().includes(query.toLowerCase())
+    );
     setFilteredMovies(filteredMovies);
     setSavedMoviesQuery(true);
     setIsLoading(true);
@@ -224,12 +239,14 @@ function App() {
                 movies={movies}
                 setIsChecked={setIsChecked}
                 isChecked={isChecked}
+                isSavedMoviesChecked={isSavedMoviesChecked}
+                setIsSavedMoviesChecked={setIsSavedMoviesChecked}
                 favoriteMoves={favoriteMoves}
                 filteredMovies={filteredMovies}
                 handleSubmit={handleSubmit}
                 handleLike={handleClickLike}
                 isLoading={isLoading}
-                setIsLoading = {setIsLoading}
+                setIsLoading={setIsLoading}
               />
             }
           />
@@ -242,17 +259,19 @@ function App() {
                 movies={movies}
                 setIsChecked={setIsChecked}
                 isChecked={isChecked}
+                isSavedMoviesChecked={isSavedMoviesChecked}
+                setIsSavedMoviesChecked={setIsSavedMoviesChecked}
                 favoriteMoves={favoriteMoves}
                 filteredMovies={favoriteMoves}
                 setFavoriteMovies={setFavoriteMovies}
                 handleClickDislike={handleClickDislike}
                 handleLike={handleLike}
-                handleSubmit={handleSubmit}
+                handleSubmit={handleSubmitSavedPage}
                 savedMovieQuery={savedMovieQuery}
                 setSavedMoviesQuery={setSavedMoviesQuery}
                 inputValue={inputValue}
                 isLoading={isLoading}
-                setIsLoading = {setIsLoading}
+                setIsLoading={setIsLoading}
               />
             }
           />

@@ -15,7 +15,9 @@ function Movies({
   handleSubmit,
   handleLike,
   isLoading,
-  setIsLoading
+  setIsLoading,
+  isSavedMoviesChecked,
+  setIsSavedMoviesChecked,
 }) {
   const [renderCards, setRenderCards] = useState([]);
 
@@ -45,7 +47,14 @@ function Movies({
     <section className="movies">
       <Header />
       <SearchForm handleSubmit={handleSubmit} />
-      <FilterCheckbox setIsChecked={setIsChecked} isChecked={isChecked} isLoading = {isLoading} setIsLoading = {setIsLoading} />
+      <FilterCheckbox
+        isSavedMoviesChecked={isSavedMoviesChecked}
+        setIsSavedMoviesChecked={setIsSavedMoviesChecked}
+        setIsChecked={setIsChecked}
+        isChecked={isChecked}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
+      />
 
       {isLoading && <Preloader />}
       {isLoading || !renderCards ? null : (
@@ -55,6 +64,8 @@ function Movies({
           filteredMovies={filteredMovies}
           renderCards={renderCards}
           handleLike={handleLike}
+          isSavedMoviesChecked={isSavedMoviesChecked}
+          setIsSavedMoviesChecked={setIsSavedMoviesChecked}
         />
       )}
 

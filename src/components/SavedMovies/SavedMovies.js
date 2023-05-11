@@ -24,6 +24,8 @@ function SavedMovies({
   setSavedMoviesQuery,
   isLoading,
   setIsLoading,
+  isSavedMoviesChecked,
+  setIsSavedMoviesChecked,
 }) {
   const [test, setTest] = useState([]);
 
@@ -34,12 +36,8 @@ function SavedMovies({
   useEffect(() => {
     if (savedMovieQuery === true) {
       setTest(filteredSavedMovies);
-      console.log(savedMovieQuery);
-      console.log('123');
     } else {
       setTest(favoriteMoves);
-      console.log(savedMovieQuery);
-      console.log(inputValue);
     }
   }, [favoriteMoves]);
 
@@ -93,16 +91,19 @@ function SavedMovies({
         isChecked={isChecked}
         isLoading={isLoading}
         setIsLoading={setIsLoading}
+        isSavedMoviesChecked={isSavedMoviesChecked}
+        setIsSavedMoviesChecked={setIsSavedMoviesChecked}
       />
       {isLoading && <Preloader />}
       {isLoading || !test ? null : (
         <MoviesCardList
-          isChecked={isChecked}
           filteredMovies={favoriteMoves}
           favoriteMoves={favoriteMoves}
           handleClickDislike={handleClickDislike}
           renderCards={test}
           handleLike={handleLike}
+          isSavedMoviesChecked={isSavedMoviesChecked}
+          setIsSavedMoviesChecked={setIsSavedMoviesChecked}
         />
       )}
 

@@ -7,6 +7,7 @@ function SearchForm({ handleSubmit }) {
   const formWithValidation = useFormWithValidation();
   const { query } = formWithValidation.values;
   const { handleChange, resetForm, errors } = formWithValidation;
+  const currentUrl = window.location.pathname === '/movies' ? true : false;
 
   function Submit(evt) {
     evt.preventDefault();
@@ -14,6 +15,8 @@ function SearchForm({ handleSubmit }) {
     handleSubmit(query || localStorage.getItem('query'));
     setSearchQuery(query);
   }
+
+  const defaultValue = currentUrl ? localStorage.getItem('query') : '';
 
   return (
     <section className="search-form">
@@ -23,7 +26,7 @@ function SearchForm({ handleSubmit }) {
           onChange={handleChange}
           placeholder="Фильм"
           type="text"
-          defaultValue={localStorage.getItem('query')}
+          defaultValue={defaultValue}
           required
           value={query}
           suppressContentEditableWarning

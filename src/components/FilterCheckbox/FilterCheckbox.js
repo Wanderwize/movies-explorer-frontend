@@ -1,12 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-function FilterCheckbox({ setIsChecked, isChecked, isLoading, setIsLoading }) {
+function FilterCheckbox({ setIsChecked, isChecked, isLoading, setIsLoading, isSavedMoviesChecked, setIsSavedMoviesChecked }) {
+  const currentUrl = window.location.pathname === '/movies' ? true : false;
+
+
+
   useEffect(() => {
-    localStorage.setItem('isChecked', isChecked);
-  }, [isChecked]);
+    if (currentUrl) {
+      localStorage.setItem('isChecked', isChecked);
+    }
+  }, [isChecked, currentUrl]);
 
   const checkboxToggle = () => {
-    setIsChecked((prevIsChecked) => !prevIsChecked);
+    if(currentUrl) {
+      setIsChecked((prevIsChecked) => !prevIsChecked)
+    } else {
+      setIsSavedMoviesChecked((prevIsSavedMoviesChecked) => !prevIsSavedMoviesChecked)
+    }
+   
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
@@ -19,7 +30,7 @@ function FilterCheckbox({ setIsChecked, isChecked, isLoading, setIsLoading }) {
         <div className="filter-checkbox__switch">
           <input
             onChange={checkboxToggle}
-            checked={isChecked}
+            checked={currentUrl ? isChecked : isSavedMoviesChecked}
             id="toggle"
             type="checkbox"
           />

@@ -14,6 +14,8 @@ function MoviesCardList({
   renderCards,
   isChecked,
   handleLike,
+  isSavedMoviesChecked,
+  setIsSavedMoviesChecked
 }) {
   const [displayedProductCount, setDisplayedProductCount] = useState(0);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -80,7 +82,7 @@ function MoviesCardList({
             <p className="movies-card-list__empty">Ничего не найдено</p>
           ) : (
             renderCards
-              .filter((movie) => (isChecked ? movie.duration < 40 : true))
+              .filter((movie) => (isChecked || isSavedMoviesChecked ? movie.duration < 40 : true))
               .slice(0, displayedProductCount)
               .map((movie, key) => (
                 <MoviesCard
